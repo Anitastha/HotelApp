@@ -22,7 +22,6 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:clickable="true"
-        android:focusable="true"
         android:queryHint="Search for Hotel, City or Location"
         android:searchIcon="@drawable/ic_search"
         android:iconifiedByDefault="false"

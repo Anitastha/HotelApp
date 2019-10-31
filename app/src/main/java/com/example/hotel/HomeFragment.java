@@ -40,11 +40,11 @@ public class HomeFragment extends Fragment {
         return view;
     }
     private void loaddata() {
-        hotels.add(new Hotel(R.drawable.hotel,"capita o","Premium Hotels with spacious rooms."));
-        hotels.add(new Hotel(R.drawable.hotel,"Premium","Budget friendly hotels at prime location and premium amenities"));
-        hotels.add(new Hotel(R.drawable.hotel,"Smart","Budget friendly hotels with basic amenities like clean linen, Wifi, TV etc."));
-        bookings.add(new Booking("Party's \n not over yet!",R.drawable.hotel,"Find an oyo for your after-party."));
-        bookings.add(new Booking("Nature \n at it's best",R.drawable.hotel,"Breathtaking views await you."));
+        hotels.add(new Hotel(R.drawable.capital,"capita o","Premium Hotels with spacious rooms."));
+        hotels.add(new Hotel(R.drawable.premium,"Premium","Budget friendly hotels at prime location and premium amenities"));
+        hotels.add(new Hotel(R.drawable.smart,"Smart","Budget friendly hotels with basic amenities like clean linen, Wifi, TV etc."));
+        bookings.add(new Booking("Party's \n not over yet!",R.drawable.party,"Find an oyo for your after-party."));
+        bookings.add(new Booking("Nature \n at it's best",R.drawable.nature,"Breathtaking views await you."));
         bookings.add(new Booking("Taking \n a business trip?",R.drawable.hotel,"Get an OYO in prime locations near you."));
     }
 }
