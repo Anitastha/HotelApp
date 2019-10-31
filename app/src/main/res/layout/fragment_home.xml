@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nav_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore OYO"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_margin="10dp"
+        android:textColor="#000"
+        android:textSize="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OYO Specials"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclev_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your wallets"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="#DFDCDC"
+        app:cardCornerRadius="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="OYO | Money"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="npr    0"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@drawable/buttonaa"
+            android:textAllCaps="true"/>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</ScrollView>

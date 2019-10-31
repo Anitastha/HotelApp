@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="185dp"
+            app:cardCornerRadius="6dp"
+            android:layout_height="230dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/imagev_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hotel" />
+
+            <TextView
+            android:id="@+id/tv_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Party's \n not over yet"
+            android:textAllCaps="true"
+            android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_booking_descript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_booking"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="10dp"
+            android:text="Find an oyo for you after party"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/booking_btn"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@id/imagev_booking"
+                android:layout_marginLeft="10dp"
+                android:contextClickable="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="monospace"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:text="Book now"
+                android:textStyle="bold"
+                android:textSize="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>
