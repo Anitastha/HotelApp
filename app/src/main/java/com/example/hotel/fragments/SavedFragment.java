@@ -1,4 +1,4 @@
-package com.example.hotel;
+package com.example.hotel.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.hotel.R;
 
 public class SavedFragment extends Fragment {
     @Nullable

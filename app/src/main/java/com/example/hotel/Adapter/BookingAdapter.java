@@ -1,28 +1,34 @@
 package com.example.hotel.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hotel.activities.BookingListActivity;
 import com.example.hotel.Models.Booking;
 import com.example.hotel.R;
+import com.example.hotel.interfaces.AdapterListner;
 
 import java.util.ArrayList;
 
 public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.offerHolder> {
     ArrayList<Booking> bookings ;
     Context context;
+    AdapterListner listner;
 
-    public BookingAdapter(ArrayList<Booking> bookings, Context context) {
+    public BookingAdapter(ArrayList<Booking> bookings, Context context,AdapterListner listner) {
         this.bookings = bookings;
         this.context = context;
+        this.listner=listner;
     }
 
     @NonNull
@@ -35,7 +41,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.offerHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull offerHolder holder, int position) {
+    public void onBindViewHolder(@NonNull offerHolder holder, final int position) {
         Booking booking = bookings.get(position);
         holder.imageViewBooking.setImageResource(booking.getOfferImage());
         holder.tvBooking.setText(booking.getOfferName());
@@ -57,7 +63,15 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.offerHol
             tvBookingDescript=itemView.findViewById(R.id.tv_booking_descript);
             btnBooking=itemView.findViewById(R.id.booking_btn);
             imageViewBooking=itemView.findViewById(R.id.imagev_booking);
+            btnBooking.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listner.onClick(view,getPosition());
+                }
+            });
 
         }
+
     }
-}
+    }
+

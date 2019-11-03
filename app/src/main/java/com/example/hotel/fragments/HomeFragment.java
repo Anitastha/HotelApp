@@ -1,5 +1,6 @@
-package com.example.hotel;
+package com.example.hotel.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,9 @@ import com.example.hotel.Adapter.BookingAdapter;
 import com.example.hotel.Adapter.HotelAdapter;
 import com.example.hotel.Models.Booking;
 import com.example.hotel.Models.Hotel;
+import com.example.hotel.R;
+import com.example.hotel.activities.BookingListActivity;
+import com.example.hotel.interfaces.AdapterListner;
 
 import java.util.ArrayList;
 
@@ -28,9 +32,17 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home, container,false);
+        loaddata();
         recyclerView=view.findViewById(R.id.recycle);
         recyclerViewBooking=view.findViewById(R.id.recyclev_booking);
-        bookingAdapter=new BookingAdapter(bookings,getContext());
+        bookingAdapter=new BookingAdapter(bookings, getContext(), new AdapterListner() {
+            @Override
+            public void onClick(View view, int position) {
+                Intent intent = new Intent(getContext(),BookingListActivity.class);
+
+                startActivity(intent);
+            }
+        });
         adapter=new HotelAdapter(hotels,getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL,false));
         recyclerViewBooking.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
@@ -43,8 +55,8 @@ public class HomeFragment extends Fragment {
         hotels.add(new Hotel(R.drawable.capital,"capita o","Premium Hotels with spacious rooms."));
         hotels.add(new Hotel(R.drawable.premium,"Premium","Budget friendly hotels at prime location and premium amenities"));
         hotels.add(new Hotel(R.drawable.smart,"Smart","Budget friendly hotels with basic amenities like clean linen, Wifi, TV etc."));
-        bookings.add(new Booking("Party's \n not over yet!",R.drawable.party,"Find an oyo for your after-party."));
-        bookings.add(new Booking("Nature \n at it's best",R.drawable.nature,"Breathtaking views await you."));
-        bookings.add(new Booking("Taking \n a business trip?",R.drawable.hotel,"Get an OYO in prime locations near you."));
+        bookings.add(new Booking("Party's \nnot over yet!",R.drawable.party,"Find an oyo for your after-party."));
+        bookings.add(new Booking("Nature \nat it's best",R.drawable.nature,"Breathtaking views await you."));
+        bookings.add(new Booking("Taking \na business trip?",R.drawable.hotel,"Get an OYO in prime locations near you."));
     }
 }

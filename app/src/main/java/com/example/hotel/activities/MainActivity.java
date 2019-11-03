@@ -1,27 +1,20 @@
-package com.example.hotel;
+package com.example.hotel.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.hotel.Adapter.HotelAdapter;
-import com.example.hotel.Models.Hotel;
+import com.example.hotel.fragments.BookFragment;
+import com.example.hotel.fragments.HomeFragment;
+import com.example.hotel.fragments.InviteFragment;
+import com.example.hotel.R;
+import com.example.hotel.fragments.SavedFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-
-import static android.app.ActionBar.DISPLAY_SHOW_CUSTOM;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
