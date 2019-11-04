@@ -32,6 +32,9 @@ public class BookingListActivity extends AppCompatActivity {
         recyclerView.setAdapter(listAdapter);
         loadValue();
     }
+    public void goBack(View view) {
+        super.onBackPressed();
+    }
     public void loadValue(){
         bookings.add(new Booking("Party's not over yet!",R.drawable.party,"Find an oyo for your after-party."));
         bookings.add(new Booking("Nature at it's best",R.drawable.nature,"Breathtaking views await you."));
